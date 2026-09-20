@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Post = ({ post }) => {
+    console.log(post)
     return (
         <div className="post">
 
@@ -13,9 +14,12 @@ const Post = ({ post }) => {
 
             </Link>
 
+
             <p className="post-body">
+                
+                
                 {
-                    (post.body).length <= 25 ? post.body : `${post.body.slice(0, 25)}...`
+                    (post.body).length <= 25 ? post.body : `${post.body.slice(0, 50)}...`
                 
                 }
             </p>

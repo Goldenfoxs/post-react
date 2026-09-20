@@ -5,10 +5,10 @@ import Post from "./Post";
 const Feed = ({posts}) => {
     return(
         <div className="feed">
-            {posts.map((item) => (
+            {posts.map((post) => (
                 <Post
-                key={posts.id}
-                post={posts}
+                key={post.id}
+                post={post}
                 />
             ))}
         </div>
