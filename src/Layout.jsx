@@ -11,12 +11,12 @@ const Layout = ({post, search, setSearch}) => {
     return (
         <div className="App">
             <Header title="My blog"/>
-            <Outlet/>
             <Nav
             search={search}
             setSearch={setSearch}
             />
-
+            <Outlet/>
+            
             <h1 className='Layout'>Layout Component</h1>
             {/* {post.map((item) => (
                 <div className='post_main' key={item.id}>

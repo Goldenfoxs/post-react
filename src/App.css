@@ -1,4 +1,6 @@
 
+a { text-decoration: none; }
+
 .header{
   background-color: aquamarine;
   text-align: center;
@@ -44,11 +46,6 @@
   font-size: 24px;
 }
 
-.author{
-  font-size: 14px;
-  font-weight: 600;
-}
-
 .post_main{
   background-color: orange;
   opacity: 0.9;
@@ -77,8 +74,16 @@
 .contact{
   display: flex;
   justify-content: space-around;
-  background-color: black;
+  background-color: orange;
   min-height: 350px;
+}
+
+.author{
+  background-color: orange;
+  margin: 0;
+  padding: 10px ;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .connection{
@@ -97,12 +102,12 @@
 }
 
 .contact_connection_main{
-  color: white;
+  color: black;
   font-size: 28px;
 }
 
 .services_info{
-  color: white;
+  color: black;
   text-decoration: none;
   padding-bottom: 15px;
   max-width: 200px;
@@ -114,7 +119,7 @@
 }
 
 .link{
-  color: white;
+  color: black;
   text-decoration: none;
   padding-bottom: 15px;
 }
@@ -122,4 +127,17 @@
 .link:hover{
   color: red;
   font-size: 18px;
+}
+
+
+.post-datertime{
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.post-title-name{
+  color: black;
+  text-decoration: none;
+  font-size: 28px;
 }

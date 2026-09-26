@@ -6,7 +6,14 @@ function Home({post}) {
         <div className="Home">
 
             <main className="home">
-                <Feed posts={post}/>
+                    {post.length ? (
+                        <Feed posts={post}/>
+                    ) : (
+                        <p>No post plese add</p>
+                    )
+            }
+                
+
             </main>
              {/* {post.map((item) => (
                 <div className='post_main' key={item.id}>

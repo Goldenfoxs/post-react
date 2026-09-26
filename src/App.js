@@ -6,6 +6,7 @@ import About from './About';
 import Contact from './Contact';
 import './App.css';
 import Missing from './Missing';
+import PostPage from './PostPage';
 // import Layout from './pages/Layout';
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
         search={search}
         setSearch={setSearch}
         />}>
+        <Route path='post'>
+            <Route path=":id" element={<PostPage posts={post}/>}/>
+        </Route>
         <Route index element={<Home post={post}/>}/>
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />

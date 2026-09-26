@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Post = ({ post }) => {
-    console.log(post)
+    // console.log(post)
     return (
         <div className="post">
 
             <Link to={`post/${post.id}`}>
-                <h2>{post.title}</h2>
+                <h2 className='post-title-name'>{post.title}</h2>
                 <p className="post-datertime">
                     {post.date} at {post.time}
                 </p>
