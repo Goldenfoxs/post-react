@@ -13,7 +13,7 @@ function Nav ({search, setSearch}) {
                 />
             </form>
             <Link to = "/" className='Link-Home' >Home</Link>
-            <Link to = "/about" className='Link-Layout'>About</Link>
+            <Link to = "/post" className='Link-Layout'>Create New Post</Link>
             <Link to = "/contact" className='Link-Layout'>Contact</Link>    
         </nav>
     )

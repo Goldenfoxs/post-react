@@ -7,6 +7,7 @@ import Contact from './Contact';
 import './App.css';
 import Missing from './Missing';
 import PostPage from './PostPage';
+import NewPost from './NewPost'
 // import Layout from './pages/Layout';
 
 function App() {
@@ -42,6 +43,15 @@ function App() {
 
     const [search, setSearch] = useState("");
     const [searchResult, setSearchResult] = useState("");
+    const [postTitle,setpostTitle] = useState("");
+    const [postBody,setpostBody] = useState("");
+
+    const navigate = useNavigate();
+    const hendleDelete = id =>{
+        const postList = post.filter(post => post.id !== id)
+        setPost(postList)
+        navigate('/')
+    }
 
     return (
       <Routes>
@@ -51,7 +61,16 @@ function App() {
         setSearch={setSearch}
         />}>
         <Route path='post'>
-            <Route path=":id" element={<PostPage posts={post}/>}/>
+            <Route path=":id" element={<PostPage
+            posts={post}
+            hendleDelete = {hendleDelete}
+            />}/>
+            <Route index element={<NewPost 
+                postTitle = {postTitle}
+                setpostTitle = {setpostTitle}
+                postBody = {postBody}
+                setpostBody = {setpostBody}
+            />}/>
         </Route>
         <Route index element={<Home post={post}/>}/>
         <Route path='/about' element={<About />} />
